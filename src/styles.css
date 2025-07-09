@@ -1,0 +1,55 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+img {
+  display: block;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+.nav {
+  width: 80%;
+  padding: 0.5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 0.825rem;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+.home-content {
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.img-sect {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.welcome-sect {
+  width: 50%;
+}
