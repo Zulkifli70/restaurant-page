@@ -1,11 +1,11 @@
-import { homePage } from "./home.js";
-import "./styles.css";
-import { menuPage } from "./menu.js";
+import { homePage } from "./pages/home.js";
+import { menuPage } from "./pages/menu.js";
+import { aboutPage } from "./pages/about.js";
 
 const content = document.querySelector(".content");
 
 content.appendChild(homePage());
-content.appendChild(menuPage());
+// content.appendChild(menuPage());
 
 const homeBtn = document.querySelector(".home-btn");
 const menuBtn = document.querySelector(".menu-btn");
@@ -19,4 +19,9 @@ homeBtn.addEventListener("click", function (e) {
 menuBtn.addEventListener("click", function (e) {
   content.innerHTML = "";
   content.appendChild(menuPage());
+});
+
+aboutBtn.addEventListener("click", function (e) {
+  content.innerHTML = "";
+  content.appendChild(aboutPage());
 });
