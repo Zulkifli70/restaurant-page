@@ -8,6 +8,7 @@ export function menuPage() {
   titleContent.setAttribute("class", "title-content");
 
   const menuTitle = document.createElement("h1");
+  menuTitle.setAttribute("class", "menu-title");
   menuTitle.textContent = "Menu";
 
   const menuList = document.createElement("div");
@@ -51,7 +52,7 @@ export function menuPage() {
 
         const menuDesc = document.createElement("p");
         menuDesc.setAttribute("class", "menu-desc");
-        menuDesc.textContent = menu.desc;
+        menuDesc.textContent = menu.desc.split(" ").slice(0, 50).join(" ");
 
         menuCard.appendChild(menuName);
         menuCard.appendChild(menuImage);
@@ -63,27 +64,27 @@ export function menuPage() {
   const MyList = new List();
 
   MyList.addMenu(
-    "Nasi Goreng",
-    "https://images.unsplash.com/photo-1680674774705-90b4904b3a7f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "Nasi Goreng is a famous Indonesian fried rice dish made with pre-cooked rice stir-fried with garlic, shallots, sweet soy sauce (kecap manis), and a variety of ingredients such as eggs, vegetables, chicken, or shrimp. Often topped with fried shallots and served with pickles or crackers, nasi goreng is a flavorful and satisfying comfort food enjoyed at any time of the day."
+    "Almond Tofu",
+    "https://wiki.hoyolab.com/_ipx/f_webp/https://bbs.hoyolab.com/hoyowiki/picture/object/%2522Sweet%2520Dream%2522_icon.png",
+    "A dessert made out of almond. It has a silky-smooth texture with a long-lasting aroma of almond. It's named tofu only because of its tofu-like shape."
   );
 
   MyList.addMenu(
-    "Bakso",
-    "https://images.unsplash.com/photo-1687425973269-af0d62587769?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "Bakso is a popular Indonesian meatball dish typically made from beef, tapioca flour, and spices. It is usually served in a flavorful broth along with noodles, tofu, vegetables, and sometimes boiled eggs or fried dumplings. Known for its savory taste and chewy texture, bakso is a beloved street food found throughout Indonesia."
+    "Adeptus Temptation",
+    "https://wiki.hoyolab.com/_ipx/f_webp/https://bbs.hoyolab.com/hoyowiki/picture/object/Adeptus'%2520Temptation_icon.png",
+    "A complex, famous type of Liyue cuisine, in which specially selected ingredients are submerged and slowly boiled in soup stock. The recipe scribbled from memory alone was enough to urge the adepti to once again return to the world of men."
   );
 
   MyList.addMenu(
-    "Sate",
-    "https://images.unsplash.com/photo-1634871572365-8bc444e6faea?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "Sate (or satay) is a traditional Indonesian dish made of skewered and grilled meat, usually served with a rich and flavorful peanut sauce. The meat can vary—from chicken and beef to goat or lamb—often marinated in a blend of spices before being grilled over charcoal. Sate is commonly served with rice cakes (lontong), cucumber slices, and fried shallots, offering a smoky, sweet, and savory taste in every bite."
+    "Bamboo Shoot Soup",
+    "https://wiki.hoyolab.com/_ipx/f_webp/https://bbs.hoyolab.com/hoyowiki/picture/object/Slow-Cooked%2520Bamboo%2520Shoot%2520Soup_icon.png",
+    "A soup dish that's been stewed for a good long while. The meat and ham have been diced into small pieces, and the soup has been kept on low heat till it turned milky white. The process has brought out the distinct flavors of both kinds of meat, making for an especially tasty soup."
   );
 
   MyList.addMenu(
-    "Siomay",
-    "https://images.unsplash.com/photo-1727403254476-06ce6f420f99?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "Siomay is an Indonesian steamed dumpling dish inspired by Chinese shumai. Made from a mixture of fish (usually mackerel), tapioca flour, and spices, siomay is typically served with boiled vegetables, tofu, egg, and potatoes. It’s topped with a rich, spicy peanut sauce, sweet soy sauce, and a splash of lime juice, creating a savory and slightly sweet flavor that's uniquely Indonesian."
+    "Jade Parcel",
+    "https://upload-static.hoyoverse.com/hoyolab-wiki/2023/04/20/94376896/f5bdfb7502762e733debdecc0b79cdaf_608908729546421919.png?x-oss-process=image%2Fformat%2Cwebp",
+    "An exquisite-looking dish. The ham's sweetness is locked inside the fresh vegetables, drizzled with a spicy broth. Delicious is an understatement."
   );
 
   menuContent.appendChild(titleContent);

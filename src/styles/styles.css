@@ -4,6 +4,20 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Cinzel";
+  src: url("../fonts/Cinzel.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Crimson Pro";
+  src: url("../fonts/CrimsonPro.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   font-size: 1.5rem;
@@ -17,8 +31,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10vh;
   border-bottom: 1px solid grey;
+  background-color: #1e3d36;
+  color: #faf3e0;
 }
 
 .nav {
@@ -32,30 +47,40 @@ header {
   font-size: 1rem;
 }
 
+.logo-sect {
+  font-family: "Cinzel", serif;
+}
+
 .btn-sect {
   display: flex;
+  align-items: center;
   gap: 1em;
 }
 
 button {
-  background-color: #fff;
+  font-family: "Crimson Pro", serif;
+  font-weight: 600;
+  background-color: #9c6b4f;
+  color: #faf3e0;
   border: none;
-  padding: 0.5em 2em;
+  padding: 0.5em 1em;
   border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: rgb(180, 180, 180);
+  background-color: #cfae6d;
 }
 
 .content {
   display: flex;
   justify-content: center;
+  background-color: #faf3e0;
 }
 
 .home-content {
   width: 80%;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,6 +98,17 @@ button:hover {
   width: 100%;
 }
 
+.welcome-title {
+  font-family: "Cinzel", serif;
+  color: #1e3d36;
+  border-bottom: 2px solid #cfae6d;
+  font-size: 1.5rem;
+}
+
 .welcome-sect {
   width: 50%;
+}
+
+.welcome-letter {
+  font-family: "Crimson Pro", serif;
 }

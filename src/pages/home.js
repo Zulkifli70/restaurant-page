@@ -1,4 +1,4 @@
-import warungImg from "../img/restaurant.jpg";
+import warungImg from "../img/wanmin.jpeg";
 import "../styles/styles.css";
 
 export function homePage() {
@@ -15,12 +15,12 @@ export function homePage() {
   welcomeSect.setAttribute("class", "welcome-sect");
 
   const welcomeTitle = document.createElement("h1");
-  welcomeTitle.textContent = "Welcome to our restaurant";
+  welcomeTitle.textContent = "Welcome to Wanmin Restaurant";
   welcomeTitle.setAttribute("class", "welcome-title");
 
   const welcomeLetter = document.createElement("p");
   welcomeLetter.textContent =
-    "Come and get a wonderful place to eat peacefully";
+    "From the Wok to Your Heart — Taste Liyue’s Finest!";
   welcomeLetter.setAttribute("class", "welcome-letter");
 
   homeContent.appendChild(imgSect);
