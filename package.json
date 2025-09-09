@@ -4,9 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "deploy": "npm run build && git checkout gh-pages && git merge main --no-edit && git add dist -f && git commit -m \"Deployment commit\" && git subtree push --prefix dist origin gh-pages && git checkout main"
+    "test": "jest",
+    "start": "node app.js",
+    "lint": "eslint .",
+    "clean": "rm -rf dist/",
+    "build": "npx webpack",
+    "predeploy": "npm run build",
+    "deploy": "git add dist -f && git commit -m \"Deployment commit\" && git subtree push --prefix dist origin gh-pages && git checkout main",
+    "deploy:setup": "git branch gh-pages",
+    "deploy:full": "git checkout gh-pages && git merge main --no-edit && npm run predeploy && npm run deploy",
+    "prestart": "npm run lint",
+    "posttest": "rm -rf logs/"
   },
   "repository": {
     "type": "git",
@@ -20,7 +28,10 @@
   },
   "homepage": "https://github.com/Zulkifli70/restaurant-page#readme",
   "devDependencies": {
+    "@eslint/js": "^9.31.0",
     "css-loader": "^7.1.2",
+    "eslint": "^9.31.0",
+    "globals": "^16.3.0",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.3",
     "style-loader": "^4.0.0",
